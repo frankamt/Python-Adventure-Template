@@ -17,9 +17,9 @@ def clear_screen():
     os.system('cls' if os.name=='nt' else 'clear')
 
 def title():
-    print(text2art('Earth', font='alpha'))
-    print(text2art('  Lab', font='alpha'))
-    print(text2art(' Hero', font='alpha'))
+    print(text2art('Ant', font='alpha'))
+    print(text2art('Artic', font='alpha'))
+    print(text2art('Hero', font='alpha'))
 
 def north():
     print ("To go north press n then enter")
@@ -57,7 +57,7 @@ def villager():
     npcname = npcnamechoice[0]
     print ("\n["+npcname+":] Hello, my name is "+npcname+", Would you like to talk to me?\n")
     shuffle(responses)
-    print ("Press y to talk to the pengiun")
+    print ("Press y to talk to the "+npcname+")
     if input() == "y":
         print ("%s: %s" % (npcname, responses[0]))
     else:
@@ -70,7 +70,7 @@ def enemy():
     enemyHP = randint(5,20)
     enemyMP = randint(5,20)
     #Below is the enemy's name, perhaps you could change this to a list and then shuffle the list, such as we did for the villager above.
-    enemyname = "Ogre"
+    enemyname = "JOOOOOOEEEEE"
     print ("\nSuddenly you hear a roar, and from the shadows you see an "+enemyname+" coming straight at you....")
     #print enemyname
     print ("Your enemy has %s Health Points" % str(enemyHP))
@@ -114,11 +114,23 @@ if input() == "y":
         print ("Armed with your sense of humour, You swing open the door to see endless ice in all direction.")
 else:
     print ("You stay at home, sat in your favourite chair watching the fire grow colder. The land of Antarctica no longer has a hero.")
-    print ("Game Over")
+    print ("What book would you like to read?")
+    print ("If you want to read Catcher in the Rye type R")
+    print ("If you want to read Diary of a Wimpy Kid type W")
+    print ("If you want to read American Vertigo type A")
+        if move == 'R':
+    print ("You made the right choice.")
+    print ("You live happily ever after.")
     sys.exit(0)
-
-print ("In the distance to the north you can see a small research base, to the east you can see a storage facilty and to the west a lot of seals.")
-
+#elif is short for Else If and it means that if the previous condition is false, to check this condition to see if that is true.
+elif move == 'W':
+    print ("\nYou suck.")
+    print ("You're dead.")
+    sys.exit(0)
+elif move == 'A':
+    print ("\nYou suck")
+    print ("You're dead.")
+    sys.exit(0)
 #Remember those functions we created at the start of the code? Well here we are using them in the game.
 print ("\n")
 north()
