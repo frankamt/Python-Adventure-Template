@@ -57,7 +57,7 @@ def villager():
     npcname = npcnamechoice[0]
     print ("\n["+npcname+":] Hello, my name is "+npcname+", Would you like to talk to me?\n")
     shuffle(responses)
-    print ("Press y to talk to the "+npcname+")
+    print ("Press y to talk to the scientist")
     if input() == "y":
         print ("%s: %s" % (npcname, responses[0]))
     else:
@@ -162,11 +162,11 @@ if fight == "y":
         enemyHP = enemyHP - hit
         print (enemyHP)
         enemyhit = randint(0,5)
-        print ("The pengiun swings a club at you and causes %s of damage" % str(enemyhit))
+        print ("Your enemy swings a club at you and causes %s of damage" % str(enemyhit))
         HP = HP - enemyhit
         print (HP)
 else:
-    print ("You turn and run away from the pengiun")
+    print ("You turn and run away from your enemy")
 
 print ("This is where this template ends, this is now YOUR world, build your adventure and share it with the world")
 
