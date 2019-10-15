@@ -74,7 +74,7 @@ def enemy():
     print ("\nSuddenly you hear a roar, and from the shadows you see an "+enemyname+" coming straight at you....")
     #print enemyname
     print ("Your enemy has %s Health Points" % str(enemyHP))
-    print ("Your enemy has %s Magic Points" % str(enemyMP))
+    print ("Your enemy has %s Strength" % str(enemyMP))
 
 
 """
@@ -93,7 +93,7 @@ print ("Welcome to the land of Antarctica, %s" % name)
 sleep(2)
 #Below we are using the helper functions to join a string of text to an integer via the str() helper.
 print ("\nYour health is" + " " + str(HP))
-print ("Your magic skill is" + " " + str(MP))
+print ("Your strength is" + " " + str(MP))
 
 
 
@@ -118,17 +118,17 @@ else:
     print ("If you want to read Catcher in the Rye type R")
     print ("If you want to read Diary of a Wimpy Kid type W")
     print ("If you want to read American Vertigo type A")
-        if move == 'R':
+if move == 'R':
     print ("You made the right choice.")
     print ("You live happily ever after.")
     sys.exit(0)
 #elif is short for Else If and it means that if the previous condition is false, to check this condition to see if that is true.
-elif move == 'W':
-    print ("\nYou suck.")
+if move == 'W':
+    print ("You suck.")
     print ("You're dead.")
     sys.exit(0)
-elif move == 'A':
-    print ("\nYou suck")
+if move == 'A':
+    print ("You suck")
     print ("You're dead.")
     sys.exit(0)
 #Remember those functions we created at the start of the code? Well here we are using them in the game.
