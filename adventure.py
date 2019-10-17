@@ -19,7 +19,7 @@ def clear_screen():
 def title():
     print(text2art('Ant', font='alpha'))
     print(text2art('Artic', font='alpha'))
-    print(text2art('Hero', font='alpha'))
+    print(text2art('Dude', font='alpha'))
 
 def north():
     print ("To go north press n then enter")
@@ -118,16 +118,16 @@ else:
     print ("If you want to read Catcher in the Rye type R")
     print ("If you want to read Diary of a Wimpy Kid type W")
     print ("If you want to read American Vertigo type A")
-if move == 'R':
+    if move == 'R':
     print ("You made the right choice.")
     print ("You live happily ever after.")
     sys.exit(0)
 #elif is short for Else If and it means that if the previous condition is false, to check this condition to see if that is true.
-if move == 'W':
+    if move == 'W':
     print ("You suck.")
     print ("You're dead.")
     sys.exit(0)
-if move == 'A':
+    if move == 'A':
     print ("You suck")
     print ("You're dead.")
     sys.exit(0)
