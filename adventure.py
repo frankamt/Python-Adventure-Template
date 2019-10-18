@@ -18,7 +18,8 @@ def clear_screen():
 
 def title():
     print(text2art('Ant', font='alpha'))
-    print(text2art('Artic', font='alpha'))
+    print(text2art('Arc', font='alpha'))
+    print(text2art('Tic', font='alpha'))
     print(text2art('Dude', font='alpha'))
 
 def north():
