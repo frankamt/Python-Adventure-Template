@@ -33,6 +33,14 @@ def south():
 def west():
     print ("To go west press w then enter")
 
+def diary():
+    print ("If you want to read Diary of a Wimpy Kid type D")
+
+def catch():
+    print ("If you want to read Catcher in the Rye type R")
+
+def vert():
+    print ("If you want to read American Vertigo type A")
 
 def setup():
     #global is used to create variables that can be used throughout our game
@@ -90,11 +98,10 @@ global move
 global enemyHP
 print ("Welcome to the land of Antarctica, %s" % name)
 #Sleep is Python's way of pausing the game for a specified number of seconds
-sleep(2)
 #Below we are using the helper functions to join a string of text to an integer via the str() helper.
 print ("\nYour health is" + " " + str(HP))
 print ("Your strength is" + " " + str(MP))
-
+sleep(2)
 
 
 print ("Would you like to venture out onto the tundra? Press y then enter to continue")
@@ -113,24 +120,24 @@ if input() == "y":
         print ("You choose not to take your weapons")
         print ("Armed with your sense of humour, You swing open the door to see endless ice in all direction.")
 else:
-    print ("You stay at home, sat in your favourite chair watching the fire grow colder. The land of Antarctica no longer has a hero.")
-    print ("What book would you like to read?")
-    print ("If you want to read Catcher in the Rye type R")
-    print ("If you want to read Diary of a Wimpy Kid type W")
-    print ("If you want to read American Vertigo type A")
+    print ("You stay at home, sat in your favourite chair watching the fire get bigger. Antarctica no longer has a hero. But...")
+    sleep(2)
+    diary()
+    catch()
+    vert()
+    move = input("What book would you like to read?")
     if move == 'R':
-    print ("You made the right choice.")
-    print ("You live happily ever after.")
-    sys.exit(0)
-#elif is short for Else If and it means that if the previous condition is false, to check this condition to see if that is true.
-    if move == 'W':
-    print ("You suck.")
-    print ("You're dead.")
-    sys.exit(0)
-    if move == 'A':
-    print ("You suck")
-    print ("You're dead.")
-    sys.exit(0)
+        print ("You made the right choice.")
+        print ("You live happily ever after. Game Over.")
+        sys.exit(0)
+    elif move == 'D':
+        print ("You suck.")
+        print ("You're dead. Game Over.")
+        sys.exit(0)
+    elif move == 'A':
+        print ("You suck")
+        print ("You're dead. Game Over")
+        sys.exit(0)
 #Remember those functions we created at the start of the code? Well here we are using them in the game.
 print ("\n")
 north()
@@ -150,7 +157,7 @@ elif move == 'w':
 
 villager()
 enemy()
-sleep(3)
+sleep()
 
 fight = input("Do you wish to fight?" )
 
