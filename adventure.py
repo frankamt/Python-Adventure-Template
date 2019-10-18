@@ -172,6 +172,11 @@ if move == 'n':
         print ("You suck")
         print ("You're dead. Game Over")
         sys.exit(0)
+    else:
+        print ("Reading is good, not reading is bad. YOU SUCK!")
+        print ("Game Over.")
+        sys.exit(0)
+
 #elif is short for Else If and it means that if the previous condition is false, to check this condition to see if that is true.
 elif move == 'e':
     print ("\nYou walk to the research base which lies to the east of your home.")
