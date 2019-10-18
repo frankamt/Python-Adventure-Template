@@ -59,7 +59,7 @@ def villager():
     global response
     #Below is a list, we can store lots of things in a list and then retrieve them later.
     responses = ["Hi", "Are you an explorer?", "Are you from this base?", "There is a snow storm heading towards research base"]
-    npcnamechoice = ["Roger", "Dexter", "Sarah", "Susan"]
+    npcnamechoice = ["Bzork", "Jormes", "Jojo Siwa", "Joe"]
     #Shuffle will shuffle the list contents into a random order.
     shuffle(npcnamechoice)
     npcname = npcnamechoice[0]
@@ -147,6 +147,25 @@ move = input("Where would you like to go? ")
 if move == 'n':
     print ("\nYou move to the north, walking in the sunshine.")
     print ("A scientist is in your path and greets you")
+    print ("It's nice and sunny, maybe it's not the day to be a hero")
+    print ("You return home and make a fire. On that fire you prepare your scrambled eggs. You want to read a book, but which book?")
+    sleep(2)
+    diary()
+    catch()
+    vert()
+    move = input("What book would you like to read?")
+    if move == 'R':
+        print ("You made the right choice.")
+        print ("You live happily ever after. Game Over.")
+        sys.exit(0)
+    elif move == 'D':
+        print ("You suck.")
+        print ("You're dead. Game Over.")
+        sys.exit(0)
+    elif move == 'A':
+        print ("You suck")
+        print ("You're dead. Game Over")
+        sys.exit(0)
 #elif is short for Else If and it means that if the previous condition is false, to check this condition to see if that is true.
 elif move == 'e':
     print ("\nYou walk to the research base which lies to the east of your home.")
@@ -168,7 +187,7 @@ if fight == "y":
         print ("You swing your knit and cause %s of damage" % str(hit))
         enemyHP = enemyHP - hit
         print (enemyHP)
-        enemyhit = randint(0,5)
+        enemyhit = randint(0,3)
         print ("Your enemy swings a club at you and causes %s of damage" % str(enemyhit))
         HP = HP - enemyhit
         print (HP)
