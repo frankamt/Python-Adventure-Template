@@ -138,6 +138,11 @@ else:
         print ("You suck")
         print ("You're dead. Game Over")
         sys.exit(0)
+    else:
+        print ("Reading is good, not reading is bad. YOU SUCK!")
+        print ("Game Over.")
+        sys.exit(0)
+
 #Remember those functions we created at the start of the code? Well here we are using them in the game.
 print ("\n")
 north()
